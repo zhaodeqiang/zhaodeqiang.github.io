@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://zhaodeqiang.github.io/"/>
   <updated>2019-05-26T05:06:33.532Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://zhaodeqiang.github.io/</id>
   
   <author>
     <name>ZDQ</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello,Hexo</title>
-    <link href="http://yoursite.com/2019/05/26/Hello-Hexo/"/>
-    <id>http://yoursite.com/2019/05/26/Hello-Hexo/</id>
+    <link href="https://zhaodeqiang.github.io/2019/05/26/Hello-Hexo/"/>
+    <id>https://zhaodeqiang.github.io/2019/05/26/Hello-Hexo/</id>
     <published>2019-05-26T05:02:22.000Z</published>
     <updated>2019-05-26T05:06:33.532Z</updated>
     
@@ -35,7 +35,7 @@
     </summary>
     
     
-      <category term="First" scheme="http://yoursite.com/tags/First/"/>
+      <category term="First" scheme="https://zhaodeqiang.github.io/tags/First/"/>
     
   </entry>
   
