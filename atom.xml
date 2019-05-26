@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mr Zhao | Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-05-26T05:06:33.532Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>ZDQ</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello,Hexo</title>
+    <link href="http://yoursite.com/2019/05/26/Hello-Hexo/"/>
+    <id>http://yoursite.com/2019/05/26/Hello-Hexo/</id>
+    <published>2019-05-26T05:02:22.000Z</published>
+    <updated>2019-05-26T05:06:33.532Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第一次配置"><a href="#第一次配置" class="headerlink" title="第一次配置"></a>第一次配置</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;第一次配置&quot;&gt;&lt;a href=&quot;#第一次配置&quot; class=&quot;headerlink&quot; title=&quot;第一次配置&quot;&gt;&lt;/a&gt;第一次配置&lt;/h1&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="First" scheme="http://yoursite.com/tags/First/"/>
+    
+  </entry>
+  
+</feed>
