@@ -5,16 +5,22 @@
     
     <entry>
       <title>Hello,Hexo</title>
-      <link href="/2019/05/26/Hello-Hexo/"/>
-      <url>/2019/05/26/Hello-Hexo/</url>
+      <link href="/2019/05/26/blogpaper/Hello-Hexo/"/>
+      <url>/2019/05/26/blogpaper/Hello-Hexo/</url>
       
-        <content type="html"><![CDATA[<h1 id="第一次配置"><a href="#第一次配置" class="headerlink" title="第一次配置"></a>第一次配置</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="第一次配置"><a href="#第一次配置" class="headerlink" title="第一次配置"></a>第一次配置</h1><p>引用外部文章只需设置permalink即可</p>]]></content>
       
+      
+      <categories>
+          
+          <category> First </category>
+          
+      </categories>
       
       
         <tags>
             
-            <tag> First </tag>
+            <tag> first blog </tag>
             
         </tags>
       
