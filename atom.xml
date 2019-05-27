@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaodeqiang.github.io/"/>
-  <updated>2019-05-27T04:20:05.524Z</updated>
+  <updated>2019-05-27T05:44:07.939Z</updated>
   <id>https://zhaodeqiang.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://zhaodeqiang.github.io/2019/05/26/blogpaper/Hello-Hexo/"/>
     <id>https://zhaodeqiang.github.io/2019/05/26/blogpaper/Hello-Hexo/</id>
     <published>2019-05-26T05:02:22.000Z</published>
-    <updated>2019-05-27T04:20:05.524Z</updated>
+    <updated>2019-05-27T05:44:07.939Z</updated>
     
     <content type="html"><![CDATA[<h1 id="第一次配置"><a href="#第一次配置" class="headerlink" title="第一次配置"></a>第一次配置</h1><p>引用外部文章只需设置permalink即可</p>]]></content>
     
