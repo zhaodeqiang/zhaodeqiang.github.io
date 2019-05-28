@@ -8,12 +8,12 @@
       <link href="/2019/05/26/blogpaper/Hello-Hexo/"/>
       <url>/2019/05/26/blogpaper/Hello-Hexo/</url>
       
-        <content type="html"><![CDATA[<h1 id="第一次配置"><a href="#第一次配置" class="headerlink" title="第一次配置"></a>第一次配置</h1><p>引用外部文章只需设置permalink即可</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="我的第一个博客网站，欢迎留言"><a href="#我的第一个博客网站，欢迎留言" class="headerlink" title="我的第一个博客网站，欢迎留言~"></a>我的第一个博客网站，欢迎留言~</h3><p>感谢<a href="https://xaoxuu.com/" target="_blank" rel="noopener">xaoxuu</a>的<a href="https://github.com/xaoxuu/hexo-theme-material-x/" target="_blank" rel="noopener">Material X</a>主题!</p>]]></content>
       
       
       <categories>
           
-          <category> First </category>
+          <category> Blog Paper </category>
           
       </categories>
       

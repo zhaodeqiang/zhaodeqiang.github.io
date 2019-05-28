@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaodeqiang.github.io/"/>
-  <updated>2019-05-27T06:53:27.831Z</updated>
+  <updated>2019-05-28T05:15:11.456Z</updated>
   <id>https://zhaodeqiang.github.io/</id>
   
   <author>
@@ -21,21 +21,20 @@
     <link href="https://zhaodeqiang.github.io/2019/05/26/blogpaper/Hello-Hexo/"/>
     <id>https://zhaodeqiang.github.io/2019/05/26/blogpaper/Hello-Hexo/</id>
     <published>2019-05-26T05:02:22.000Z</published>
-    <updated>2019-05-27T06:53:27.831Z</updated>
+    <updated>2019-05-28T05:15:11.456Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="第一次配置"><a href="#第一次配置" class="headerlink" title="第一次配置"></a>第一次配置</h1><p>引用外部文章只需设置permalink即可</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="我的第一个博客网站，欢迎留言"><a href="#我的第一个博客网站，欢迎留言" class="headerlink" title="我的第一个博客网站，欢迎留言~"></a>我的第一个博客网站，欢迎留言~</h3><p>感谢<a href="https://xaoxuu.com/" target="_blank" rel="noopener">xaoxuu</a>的<a href="https://github.com/xaoxuu/hexo-theme-material-x/" target="_blank" rel="noopener">Material X</a>主题!</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;第一次配置&quot;&gt;&lt;a href=&quot;#第一次配置&quot; class=&quot;headerlink&quot; title=&quot;第一次配置&quot;&gt;&lt;/a&gt;第一次配置&lt;/h1&gt;&lt;p&gt;引用外部文章只需设置permalink即可&lt;/p&gt;
-
+        &lt;h3 id=&quot;我的第一个博客网站，欢迎留言&quot;&gt;&lt;a href=&quot;#我的第一个博客网站，欢迎留言&quot; class=&quot;headerlink&quot; title=&quot;我的第一个博客网站，欢迎留言~&quot;&gt;&lt;/a&gt;我的第一个博客网站，欢迎留言~&lt;/h3&gt;&lt;p&gt;感谢&lt;a href=&quot;https://x
       
     
     </summary>
     
-      <category term="First" scheme="https://zhaodeqiang.github.io/blog/categories/First/"/>
+      <category term="Blog Paper" scheme="https://zhaodeqiang.github.io/blog/categories/Blog-Paper/"/>
     
     
       <category term="first blog" scheme="https://zhaodeqiang.github.io/blog/tags/first-blog/"/>
