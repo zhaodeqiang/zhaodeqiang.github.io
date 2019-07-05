@@ -3,8 +3,15 @@
 
 
     <url>
-        <loc>https://zhaodeqiang.github.io/blog/tags/first-blog/</loc>
-        <lastmod>2019-05-28T05:15:11.456Z</lastmod>
+        <loc>https://zhaodeqiang.github.io/blog/tags/Linux/</loc>
+        <lastmod>2019-06-23T02:14:01.045Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://zhaodeqiang.github.io/blog/tags/MarkDown/</loc>
+        <lastmod>2019-06-23T02:25:54.646Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

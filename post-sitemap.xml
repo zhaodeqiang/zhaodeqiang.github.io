@@ -8,8 +8,16 @@
     </url>
 
     <url>
-        <loc>https://zhaodeqiang.github.io/2019/05/26/blogpaper/Hello-Hexo/</loc>
-        <lastmod>2019-05-28T05:15:11.456Z</lastmod>
+        <loc>https://zhaodeqiang.github.io/2019/06/22/blogpaper/2019-06-22-MarkDown%E8%AF%AD%E6%B3%95/</loc>
+        <lastmod>2019-06-23T02:25:54.646Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://zhaodeqiang.github.io/2019/06/23/blogpaper/2019-06-23-%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4-CentOS7/</loc>
+        <lastmod>2019-06-23T02:14:01.045Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

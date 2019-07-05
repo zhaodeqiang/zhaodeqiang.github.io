@@ -239,6 +239,8 @@
         
           
         
+          
+        
       
     
     
@@ -256,8 +258,8 @@
       
         
   <h2 class="title">
-    <a href="/2019/05/26/blogpaper/Hello-Hexo/">
-      Hello,Hexo
+    <a href="/2019/06/23/blogpaper/2019-06-23-常用Linux命令-CentOS7/">
+      常用Linux命令(基于Centos7.6)
     </a>
   </h2>
 
@@ -285,7 +287,7 @@
             <div class="new-meta-item date">
   <a class="notlink">
     <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-    <p>2019-05-26</p>
+    <p>2019-06-23</p>
   </a>
 </div>
 
@@ -312,7 +314,7 @@
       <span class="post-meta-item-icon">
       <i class="fas fa-keyboard"></i>
         <span class="post-meta-item-text">字数统计:</span>
-        <span class="post-count">20字</span>
+        <span class="post-count">886字</span>
       </span>
     
 
@@ -321,7 +323,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">阅读时长:</span>
-        <span class="post-count">1分钟</span>
+        <span class="post-count">3分钟</span>
       </span>
     </span>
 </div>
@@ -346,14 +348,497 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <h3 id="我的第一个博客网站，欢迎留言"><a href="#我的第一个博客网站，欢迎留言" class="headerlink" title="我的第一个博客网站，欢迎留言~"></a>我的第一个博客网站，欢迎留言~</h3><p>感谢<a href="https://xaoxuu.com/" target="_blank" rel="noopener">xaoxuu</a>的<a href="https://github.com/xaoxuu/hexo-theme-material-x/" target="_blank" rel="noopener">Material X</a>主题!</p>
+      <h3 id="一、系统服务管理"><a href="#一、系统服务管理" class="headerlink" title="一、系统服务管理"></a>一、系统服务管理</h3><ul>
+<li><h4 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h4><ul>
+<li><p>输出系统中各个服务的状态：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl list-units --type=service</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>查看服务的运行状态：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>关闭服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>启动服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>重新启动服务（不管当前服务是启动还是关闭）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart firewalld</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>重新载入配置信息而不中断服务：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl reload firewalld</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>禁止服务开机自启动：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="二、-文件管理"><a href="#二、-文件管理" class="headerlink" title="二、 文件管理"></a>二、 文件管理</h3><ul>
+<li>ls</li>
+</ul>
+<p>列出当前目录(/)下的所有文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h5></li>
+</ul>
+<p>获取目前所在工作目录的绝对路径</p>
+<ul>
+<li><h5 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h5></li>
+</ul>
+<p>改变当前工作目录，例如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="date"><a href="#date" class="headerlink" title="date"></a>date</h5></li>
+</ul>
+<p>显示或修改系统时间与日期；</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">date '+%Y-%m-%d %H:%M:%S'</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h5></li>
+</ul>
+<p>用于设置用户密码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">passwd root</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="su"><a href="#su" class="headerlink" title="su"></a>su</h5></li>
+</ul>
+<p>切换用户身份（切换为root用户）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su -</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="man"><a href="#man" class="headerlink" title="man"></a>man</h5></li>
+</ul>
+<p>显示指定命令的帮助信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man ls</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="who"><a href="#who" class="headerlink" title="who"></a>who</h5><ul>
+<li>查询系统处于什么运行级别：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">who -r</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>显示目前登录到系统的用户：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">who -buT</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><h5 id="free"><a href="#free" class="headerlink" title="free"></a>free</h5></li>
+</ul>
+<p>显示系统内存状态（单位MB）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">free -m</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h5><ul>
+<li>显示系统进程运行动态</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>查看sshd进程的运行动态：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep sshd</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><h5 id="top"><a href="#top" class="headerlink" title="top"></a>top</h5></li>
+</ul>
+<p>查看即时活跃的进程，类似Windows的任务管理器</p>
+<ul>
+<li><h5 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h5></li>
+</ul>
+<p>创建目录</p>
+<ul>
+<li><h5 id="more"><a href="#more" class="headerlink" title="more"></a>more</h5></li>
+</ul>
+<p>文件过长时用于分页查看文件内容，例如以每页10行查看boot.log文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">more -c -10 /var/log/boot.log</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h5></li>
+</ul>
+<p>查看Linux启动日志文件文件，并标明行号：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat -Ab /var/log/boot.log</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h5></li>
+</ul>
+<p>创建文件，例如，创建text.txt文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch text.txt</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h5><ul>
+<li>删除文件：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm text.txt</span><br></pre></td></tr></table></figure>
+<ul>
+<li>强制删除某个目录及其子目录：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf testdir/</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h5></li>
+</ul>
+<p>将test1目录复制到test2目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r /mydata/tes1 /mydata/test2</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h5></li>
+</ul>
+<p>移动或覆盖文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv text.txt text2.txt</span><br></pre></td></tr></table></figure>
+<h3 id="三、压缩与解压"><a href="#三、压缩与解压" class="headerlink" title="三、压缩与解压"></a>三、压缩与解压</h3><ul>
+<li><h5 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h5><ul>
+<li>将/etc文件夹中的文件归档到文件etc.tar（并不会进行压缩）：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -cvf /mydata/etc.tar /etc</span><br></pre></td></tr></table></figure>
+<ul>
+<li>用gzip压缩文件夹/etc中的文件到文件etc.tar.gz：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zcvf /mydata/etc.tar.gz /etc</span><br></pre></td></tr></table></figure>
+<ul>
+<li>用bzip2压缩文件夹/etc到文件/etc.tar.bz2：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -jcvf /mydata/etc.tar.bz2 /etc</span><br></pre></td></tr></table></figure>
+<ul>
+<li>分页查看压缩包中内容（gzip）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -ztvf /mydata/etc.tar.gz |more -c -10</span><br></pre></td></tr></table></figure>
+<ul>
+<li>解压文件到当前目录（gzip）：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf /mydata/etc.tar.gz</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="四、磁盘和网络管理"><a href="#四、磁盘和网络管理" class="headerlink" title="四、磁盘和网络管理"></a>四、磁盘和网络管理</h3><ul>
+<li><h5 id="df"><a href="#df" class="headerlink" title="df"></a>df</h5></li>
+</ul>
+<p>查看磁盘空间占用情况：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -hT</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="dh"><a href="#dh" class="headerlink" title="dh"></a>dh</h5></li>
+</ul>
+<p>查看当前目录下的文件及文件夹所占大小：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -h --max-depth=1 ./*</span><br></pre></td></tr></table></figure>
+<ul>
+<li><h5 id="ifconfig"><a href="#ifconfig" class="headerlink" title="ifconfig"></a>ifconfig</h5></li>
+</ul>
+<p>显示当前网络接口状态</p>
+<ul>
+<li><h5 id="netstat"><a href="#netstat" class="headerlink" title="netstat"></a>netstat</h5><ul>
+<li>查看当前路由信息：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -rn</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看所有有效TCP连接：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -an</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看系统中启动的监听服务：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -tulnp</span><br></pre></td></tr></table></figure>
+<ul>
+<li>查看处于连接状态的系统资源信息：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -atunp</span><br></pre></td></tr></table></figure>
+</li>
+<li><h5 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h5></li>
+</ul>
+<p>从网络上下载文件</p>
+<h3 id="五、软件的安装与管理"><a href="#五、软件的安装与管理" class="headerlink" title="五、软件的安装与管理"></a>五、软件的安装与管理</h3><ul>
+<li><h5 id="rpm"><a href="#rpm" class="headerlink" title="rpm"></a>rpm</h5><ul>
+<li>安装软件包：rpm -ivh nginx-1.12.2-2.el7.x86_64.rpm</li>
+<li>模糊搜索软件包：rpm -qa | grep nginx</li>
+<li>精确查找软件包：rpm -qa nginx</li>
+<li>查询软件包的安装路径：rpm -ql nginx-1.12.2-2.el7.x86_64</li>
+<li>查看软件包的概要信息：rpm -qi nginx-1.12.2-2.el7.x86_64</li>
+<li>验证软件包内容和安装文件是否一致：rpm -V nginx-1.12.2-2.el7.x86_64</li>
+<li>更新软件包：rpm -Uvh nginx-1.12.2-2.el7.x86_64</li>
+<li>删除软件包：rpm -e nginx-1.12.2-2.el7.x86_64</li>
+</ul>
+</li>
+<li><h5 id="yum"><a href="#yum" class="headerlink" title="yum"></a>yum</h5><ul>
+<li>安装软件包： yum install nginx</li>
+<li>检查可以更新的软件包：yum check-update</li>
+<li>更新指定的软件包：yum update nginx</li>
+<li>在资源库中查找软件包信息：yum info nginx*</li>
+<li>列出已经安装的所有软件包：yum info installed</li>
+<li>列出软件包名称：yum list nginx*</li>
+<li>模糊搜索软件包：yum search nginx</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
     
       <div class="full-width auto-padding tags">
         
-          <a href="/blog/tags/first-blog/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>first blog</a>
+          <a href="/blog/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>Linux</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+          </div>
+        
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
+
+
+  <section class="meta">
+    
+    
+    <div class="meta" id="header-meta">
+      
+        
+  <h2 class="title">
+    <a href="/2019/06/22/blogpaper/2019-06-22-MarkDown语法/">
+      MarkDown常用语法
+    </a>
+  </h2>
+
+
+      
+      <div class="new-meta-box">
+        
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://zhaodeqiang.github.io" rel="nofollow">
+      
+        <img src="https://cdn.jsdelivr.net/gh/zhaodeqiang/assets@master/avatar/avatar.png">
+      
+      <p>ZDQ</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2019-06-22</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/blog/categories/Blog-Paper/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Blog Paper</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+<div style="margin-top:5px;>
+    <span class=" post-time">
+      <span class="post-meta-item-icon">
+      <i class="fas fa-keyboard"></i>
+        <span class="post-meta-item-text">字数统计:</span>
+        <span class="post-count">1.1k字</span>
+      </span>
+    
+
+    <span class="post-time">
+      &nbsp;&nbsp;&nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">阅读时长:</span>
+        <span class="post-count">3分钟</span>
+      </span>
+    </span>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+
+
+          
+        
+          
+            
+
+          
+        
+      </div>
+      
+        <hr>
+      
+    </div>
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h3 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+<p>效果如下所示：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><hr>
+<h3 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h3><ul>
+<li><h5 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h5><p>需要加粗的文字左右两边分别用两个*号包起来（不需要加空格）</p>
+</li>
+<li><h5 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h5><p>需要倾斜的文字左右两边分别用一个*号包起来</p>
+</li>
+<li><h5 id="斜体加粗"><a href="#斜体加粗" class="headerlink" title="斜体加粗"></a>斜体加粗</h5><p>需要倾斜和加粗的文字左右两边分别用三个*号包起来</p>
+</li>
+<li><h5 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h5><p>需要加删除线的文字左右两边分别用两个~~号包起来</p>
+</li>
+</ul>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">**加粗的文字**</span><br><span class="line">*倾斜的文字*</span><br><span class="line">***斜体加粗的文字***</span><br><span class="line">~~加删除线的文字~~</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p><strong>加粗的文字</strong></p>
+<p><em>倾斜的文字</em></p>
+<p><strong><em>斜体加粗的文字</em></strong></p>
+<p><del>加删除线的文字</del></p>
+<h3 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h3><p>需要引用时，在文字前加&gt;符号即可。可以嵌套叠加，如添加两个&gt;&gt;或者三个&gt;&gt;&gt;符号。</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;引用的内容</span><br><span class="line">&gt;&gt;引用的内容</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;引用的内容</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<blockquote>
+<p>引用的内容</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>引用的内容</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>引用的内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h3><p>使用三个或者三个以上的 - 号或者 *号均可以实现分割线效果。</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">----</span><br><span class="line">***</span><br><span class="line">*****</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<h3 id="五、图片"><a href="#五、图片" class="headerlink" title="五、图片"></a>五、图片</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![图片名称](图片地址 &apos;&apos;title&apos;&apos;)</span><br><span class="line">解释：</span><br><span class="line">图片名称是显示在图片下方的文字。</span><br><span class="line">title当鼠标移到图片上时显示的内容，可以选择不加。</span><br></pre></td></tr></table></figure>
+<h3 id="六、超链接"><a href="#六、超链接" class="headerlink" title="六、超链接"></a>六、超链接</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[超链接名称](超链接地址 &quot;title&quot;)</span><br><span class="line">解释：</span><br><span class="line">title可以不加。</span><br><span class="line"></span><br><span class="line">如果需要在新的页面中打开超链接可以使用html语言的a标签代替。</span><br><span class="line">示例：</span><br><span class="line">&lt;a href=&quot;http://www.baidu.com&quot; target=&quot;_blank&quot;&gt;百度&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h3><ul>
+<li><h5 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h5></li>
+</ul>
+<p>无序列表使用用 - + * 任何一种符号都可以实现。</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- 列表内容</span><br><span class="line">+ 列表内容</span><br><span class="line">* 列表内容</span><br><span class="line"></span><br><span class="line">必须注意：- + * 跟内容之间都需要添加一个空格。</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<ul>
+<li><p>列表内容</p>
+</li>
+<li><p>列表内容</p>
+</li>
+<li><p>列表内容</p>
+</li>
+<li><h5 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h5></li>
+</ul>
+<p>使用数字加实心圆点即可实现有序列表。</p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.列表内容</span><br><span class="line">2.列表内容</span><br><span class="line">3.列表内容</span><br><span class="line"></span><br><span class="line">必须注意：序号与内容之间需要添加空格。</span><br></pre></td></tr></table></figure>
+<p>效果：</p>
+<p>1.列表内容<br>2.列表内容<br>3.列表内容</p>
+<ul>
+<li><h5 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h5></li>
+</ul>
+<p><strong>上一级列表和下一级列表之间添加Tab键即可实现列表的嵌套。</strong></p>
+<ul>
+<li>一级无序列表内容<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+<li>一级无序列表内容<ol>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>一级有序列表内容<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+<li>一级有序列表内容<ol>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+<li>二级有序列表内容</li>
+</ol>
+</li>
+</ol>
+<p><strong>注意：如果要手动添加二级列表或者其他代码块之类的，务必记得在下一行中先敲一个TAB键然后再重复上面的步骤。</strong></p>
+<h3 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h3><p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|:--:|---:</span><br><span class="line">内容|内容|内容</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容。</span><br><span class="line">- 有一个就行，为了对齐，多加了几个</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line">注：原生的语法两边都要用 | 包起来。此处省略</span><br></pre></td></tr></table></figure>
+<h3 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h3><p>语法：<br>单行代码：代码之间分别用一个反引号包起来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`代码内容`</span><br></pre></td></tr></table></figure>
+<p>代码块：代码之间分别用三个反引号包起来，且两边的反引号单独占一行。（括号为了防止转义）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(```)</span><br><span class="line">  代码...</span><br><span class="line">  代码...</span><br><span class="line">  代码...</span><br><span class="line">(```)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>效果：</p>
+<ul>
+<li>单行代码：</li>
+</ul>
+<p><code>public static void maim(String[] args){}</code></p>
+<ul>
+<li>代码块：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Hello"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">​```flow</span><br><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure>
+<p><code>`</code></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/blog/tags/MarkDown/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>MarkDown</a>
         
       </div>
     
@@ -564,7 +1049,7 @@
     <div class="content pure">
       <ul class="entry">
         
-          <li><a class="flat-box" title="/blog/categories/Blog-Paper/" href="/blog/categories/Blog-Paper/"><div class="name">Blog Paper</div><div class="badge">(1)</div></a></li>
+          <li><a class="flat-box" title="/blog/categories/Blog-Paper/" href="/blog/categories/Blog-Paper/"><div class="name">Blog Paper</div><div class="badge">(2)</div></a></li>
         
       </ul>
     </div>
@@ -589,7 +1074,7 @@
 </header>
 
     <div class="content pure">
-      <a href="/blog/tags/first-blog/" style="font-size: 14px; color: #999">first blog</a>
+      <a href="/blog/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/blog/tags/MarkDown/" style="font-size: 14px; color: #999">MarkDown</a>
     </div>
   </section>
 
