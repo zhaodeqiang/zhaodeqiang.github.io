@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>404 Not Found | Mr Zhao&#39;s Blog</title>
+  <title>Tag: 数据结构 | Mr Zhao&#39;s Blog</title>
   
   
 
@@ -58,7 +58,7 @@
   
   
   <div class="cover-wrapper">
-    <cover class="cover page half">
+    <cover class="cover  half">
       
         
   <h1 class="title">Mr Zhao</h1>
@@ -105,7 +105,7 @@
 
       
     </cover>
-    <header class="l_header no_sidebar pure">
+    <header class="l_header pure">
   <div id="loading-bar-wrapper">
     <div id="loading-bar" class="pure"></div>
   </div>
@@ -170,6 +170,8 @@
 			<ul class="switcher h-list">
 				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
         
+          <li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+        
 			</ul>
 		</div>
 	</div>
@@ -228,12 +230,25 @@
 
   <div class="l_body">
     <div class='body-wrapper'>
-      <div class="l_main no_sidebar">
-  
-
-  
-    <article id="page" class="post white-box article-type-page" itemscope itemprop="blogPost">
       
+<div class="l_main">
+  
+    
+      
+  <section class="post-list">
+    
+      
+        
+          
+        
+      
+    
+    
+      
+        
+          <div class="post-wrapper">
+            <article class="post reveal ">
+  
 
 
   <section class="meta">
@@ -241,133 +256,150 @@
     
     <div class="meta" id="header-meta">
       
+        
+  <h2 class="title">
+    <a href="/2020/02/15/blogpaper/2020-02-15-完全二叉树度为2的节点个数计算/">
+      完全二叉树度为2的节点个数计算方法
+    </a>
+  </h2>
+
+
+      
       <div class="new-meta-box">
         
+          
+        
+          
+            
+  <div class="new-meta-item author">
+    <a href="https://zhaodeqiang.github.io" rel="nofollow">
+      
+        <img src="https://cdn.jsdelivr.net/gh/zhaodeqiang/assets@master/avatar/avatar.png">
+      
+      <p>ZDQ</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date">
+  <a class="notlink">
+    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+    <p>2020-02-15</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  
+  <div class="new-meta-item category">
+    <a href="/blog/categories/Blog-Paper/" rel="nofollow">
+      <i class="fas fa-folder-open" aria-hidden="true"></i>
+      <p>Blog Paper</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+<div style="margin-top:5px;>
+    <span class=" post-time">
+      <span class="post-meta-item-icon">
+      <i class="fas fa-keyboard"></i>
+        <span class="post-meta-item-text">字数统计:</span>
+        <span class="post-count">209字</span>
+      </span>
+    
+
+    <span class="post-time">
+      &nbsp;&nbsp;&nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">阅读时长:</span>
+        <span class="post-count">1分钟</span>
+      </span>
+    </span>
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+
+
+          
+        
+          
+            
+
+          
+        
       </div>
+      
+        <hr>
       
     </div>
   </section>
 
 
-      <section class="article typo">
-        <div class="article-entry" itemprop="articleBody">
-          <h1 id="404-Not-Found"><a href="#404-Not-Found" class="headerlink" title="404 Not Found"></a><center><strong>404 Not Found</strong></center></h1><p><br></p>
-<center><strong>很抱歉，您访问的页面不存在</strong></center><br><center>可能是输入地址有误或该地址已被删除</center>
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h3 id="完全二叉树度为2的节点个数计算方法"><a href="#完全二叉树度为2的节点个数计算方法" class="headerlink" title="完全二叉树度为2的节点个数计算方法"></a>完全二叉树度为2的节点个数计算方法</h3><ul>
+<li>假设一棵二叉树的节点个数为<code>n</code>，度为<code>0</code>的节点（根节点或叫叶子节点）个数为<code>n0</code>，度为<code>1</code>的节点个数为<code>n1</code>，度为<code>2</code>的节点个数为<code>n2</code>，则有：</li>
+</ul>
+<p><code>n = n0 + n1 + n2  (1)</code></p>
+<ul>
+<li>二叉树的边数为（度为<code>1</code>的节点产生<code>1</code>条边，度为<code>2</code>的节点产生两条边，根节点不会产生边；同时，除了根节点之外，每个节点都有一条边指向该节点，所以总边数为<code>n - 1</code>）：</li>
+</ul>
+<p><code>n1 + 2n2 = n - 1   (2)</code></p>
+<ul>
+<li>由<code>(1)</code>和<code>(2)</code>得到：</li>
+</ul>
+<p><code>n0 = n2 + 1  (3)</code></p>
+<ul>
+<li>由<code>(1)(3)</code>得到：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">n0 = (n - n1 + <span class="number">1</span>)   (<span class="number">4</span>)</span><br><span class="line">n2 = (n - n1 - <span class="number">1</span>)   (<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>因为在完全二叉树中，度为<code>1</code>的节点个数为<code>0</code>或<code>1</code>，所以：<ol>
+<li>当<code>n1 = 1</code> 时：<code>n2 = n / 2 - 1</code></li>
+<li>当<code>n1 = 0</code> 时：<code>n2 = (n - 1) / 2</code></li>
+</ol>
+</li>
+</ul>
 
-<p><br><br><br></p>
-
-        </div>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
         
+          <a href="/blog/tags/数据结构/" rel="nofollow"><i class="fas fa-hashtag fa-fw"></i>数据结构</a>
         
-      </section>
-    </article>
-  
-
-  
+      </div>
     
-      
-    
-      
-    
-      
-        <section class="widget grid">
-  
-<header class="pure">
-  <div><i class="fas fa-map-signs fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;站内导航</div>
-  
-</header>
+  </section>
+</article>
 
-  <div class="content pure">
-    <ul class="grid navgation">
-      
-        <li><a class="flat-box" title="/" href="/" id="home">
-          
-            <i class="fas fa-clock fa-fw" aria-hidden="true"></i>
-          
-          近期文章
-        </a></li>
-      
-        <li><a class="flat-box" title="/blog/archives/" href="/blog/archives/" rel="nofollow" id="blogarchives">
-          
-            <i class="fas fa-archive fa-fw" aria-hidden="true"></i>
-          
-          文章归档
-        </a></li>
-      
-        <li><a class="flat-box" title="/projects/" href="/projects/" id="projects">
-          
-            <i class="fas fa-code-branch fa-fw" aria-hidden="true"></i>
-          
-          开源项目
-        </a></li>
-      
-        <li><a class="flat-box" title="/friends/" href="/friends/" rel="nofollow" id="friends">
-          
-            <i class="fas fa-link fa-fw" aria-hidden="true"></i>
-          
-          我的友链
-        </a></li>
-      
-        <li><a class="flat-box" title="https://xaoxuu.com/wiki/material-x/" href="https://xaoxuu.com/wiki/material-x/" rel="nofollow" id="https:xaoxuu.comwikimaterial-x">
-          
-            <i class="fas fa-book fa-fw" aria-hidden="true"></i>
-          
-          主题文档
-        </a></li>
-      
-        <li><a class="flat-box" title="/about/" href="/about/" rel="nofollow" id="about">
-          
-            <i class="fas fa-info-circle fa-fw" aria-hidden="true"></i>
-          
-          关于本站
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
-
-      
-    
-      
-    
-      
-    
-      
-    
-  
-
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  <article class="post white-box comments">
-    <section class="article typo">
-      <h4><i class="fas fa-comments fa-fw" aria-hidden="true"></i>&nbsp;评论</h4>
-      
-      
-      
-      
-        <section id="comments">
-          <div id="valine_container" class="valine_thread">
-            <i class="fas fa-spinner fa-spin fa-fw"></i>
           </div>
-        </section>
+        
       
-    </section>
-  </article>
-
+    
+  </section>
+  
+    
+    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+    
+    
 
   
 
 
-
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
-
-
-
-
+    
+  
 </div>
 <aside class="l_side">
   
@@ -777,38 +809,6 @@ setInterval("createtime()",250);
 
 
 
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  
-    
-      <script src="https://cdn.jsdelivr.net/gh/zhaodeqiang/volantis@1/js/volantis.min.js"></script>
-    
-  
-  <script>
-  var GUEST_INFO = ['nick','mail','link'];
-  var guest_info = 'nick,mail,link'.split(',').filter(function(item){
-    return GUEST_INFO.indexOf(item) > -1
-  });
-  var notify = 'true' == true;
-  var verify = 'true' == true;
-  var valine = new Valine();
-  valine.init({
-    el: '#valine_container',
-    notify: notify,
-    verify: verify,
-    guest_info: guest_info,
-    
-      path: "/404.html",
-    
-    appId: "p6ovgEemiXmvI0tYvbwGpTDJ-gzGzoHsz",
-    appKey: "cNd9Yv8qbmE3uLTlApkPuNMk",
-    placeholder: "请留言告诉我您要访问哪个页面找不到了",
-    pageSize:'10',
-    avatar:'mp',
-    lang:'zh-cn',
-    highlight:'true'
-  })
-  </script>
 
 
 

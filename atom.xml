@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zhaodeqiang.github.io/"/>
-  <updated>2019-06-23T02:14:01.045Z</updated>
+  <updated>2020-02-15T05:11:16.910Z</updated>
   <id>https://zhaodeqiang.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>完全二叉树度为2的节点个数计算方法</title>
+    <link href="https://zhaodeqiang.github.io/2020/02/15/blogpaper/2020-02-15-%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91%E5%BA%A6%E4%B8%BA2%E7%9A%84%E8%8A%82%E7%82%B9%E4%B8%AA%E6%95%B0%E8%AE%A1%E7%AE%97/"/>
+    <id>https://zhaodeqiang.github.io/2020/02/15/blogpaper/2020-02-15-完全二叉树度为2的节点个数计算/</id>
+    <published>2020-02-15T04:40:45.000Z</published>
+    <updated>2020-02-15T05:11:16.910Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="完全二叉树度为2的节点个数计算方法"><a href="#完全二叉树度为2的节点个数计算方法" class="headerlink" title="完全二叉树度为2的节点个数计算方法"></a>完全二叉树度为2的节点个数计算方法</h3><ul><li>假设一棵二叉树的节点个数为<code>n</code>，度为<code>0</code>的节点（根节点或叫叶子节点）个数为<code>n0</code>，度为<code>1</code>的节点个数为<code>n1</code>，度为<code>2</code>的节点个数为<code>n2</code>，则有：</li></ul><p><code>n = n0 + n1 + n2  (1)</code></p><ul><li>二叉树的边数为（度为<code>1</code>的节点产生<code>1</code>条边，度为<code>2</code>的节点产生两条边，根节点不会产生边；同时，除了根节点之外，每个节点都有一条边指向该节点，所以总边数为<code>n - 1</code>）：</li></ul><p><code>n1 + 2n2 = n - 1   (2)</code></p><ul><li>由<code>(1)</code>和<code>(2)</code>得到：</li></ul><p><code>n0 = n2 + 1  (3)</code></p><ul><li>由<code>(1)(3)</code>得到：</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">n0 = (n - n1 + <span class="number">1</span>)   (<span class="number">4</span>)</span><br><span class="line">n2 = (n - n1 - <span class="number">1</span>)   (<span class="number">5</span>)</span><br></pre></td></tr></table></figure><ul><li>因为在完全二叉树中，度为<code>1</code>的节点个数为<code>0</code>或<code>1</code>，所以：<ol><li>当<code>n1 = 1</code> 时：<code>n2 = n / 2 - 1</code></li><li>当<code>n1 = 0</code> 时：<code>n2 = (n - 1) / 2</code></li></ol></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;完全二叉树度为2的节点个数计算方法&quot;&gt;&lt;a href=&quot;#完全二叉树度为2的节点个数计算方法&quot; class=&quot;headerlink&quot; title=&quot;完全二叉树度为2的节点个数计算方法&quot;&gt;&lt;/a&gt;完全二叉树度为2的节点个数计算方法&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;假设一棵
+      
+    
+    </summary>
+    
+      <category term="Blog Paper" scheme="https://zhaodeqiang.github.io/blog/categories/Blog-Paper/"/>
+    
+    
+      <category term="数据结构" scheme="https://zhaodeqiang.github.io/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
   
   <entry>
     <title>常用Linux命令(基于Centos7.6)</title>
